@@ -71,3 +71,20 @@ buttonRole.forEach((val) => {
     val.classList.remove("animate__shakeX");
   });
 });
+
+// random quote
+const randomQuote = () => {
+  fetch("https://type.fit/api/quotes")
+    .then((res) => res.json())
+    .then((val) => {
+      const randomNumber = Math.floor(Math.random() * (16 - 1 + 1)) + 1;
+      document.querySelector(".random-quote").innerText =
+        val[randomNumber - 1].text;
+      document.querySelector(".quote-from").innerText =
+        val[randomNumber - 1].author + " -";
+    });
+};
+randomQuote();
+document.getElementById("quote-generate").addEventListener("click", () => {
+  randomQuote();
+});
