@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: caveat;
+  src: url("../fonts/Caveat-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: acme;
+  src: url("../fonts/Acme-Regular.ttf");
+}
+
+.quote-box {
+  background: rgba(42, 157, 143, 0.52);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.4px);
+  -webkit-backdrop-filter: blur(7.4px);
+}
+bod {
+  font-family: acme;
+}
+.random-quote {
+  font-family: caveat;
+}
